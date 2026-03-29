@@ -22,9 +22,9 @@ for skill in ~/DevVN-WordPress-Skills/skills/*/; do
   ln -s "$skill" ~/.claude/skills/$(basename "$skill")
 done
 
-# Windows (PowerShell) — symlink each skill
+# Windows (PowerShell) — junction each skill (no admin required)
 Get-ChildItem "$HOME\DevVN-WordPress-Skills\skills" -Directory | ForEach-Object {
-  New-Item -ItemType SymbolicLink -Path "$HOME\.claude\skills\$($_.Name)" -Target $_.FullName
+  cmd /c mklink /J "$HOME\.claude\skills\$($_.Name)" $_.FullName
 }
 ```
 
@@ -116,9 +116,9 @@ for skill in ~/DevVN-WordPress-Skills/skills/*/; do
   ln -s "$skill" ~/.claude/skills/$(basename "$skill")
 done
 
-# Windows (PowerShell) — symlink từng skill
+# Windows (PowerShell) — junction từng skill (không cần quyền Admin)
 Get-ChildItem "$HOME\DevVN-WordPress-Skills\skills" -Directory | ForEach-Object {
-  New-Item -ItemType SymbolicLink -Path "$HOME\.claude\skills\$($_.Name)" -Target $_.FullName
+  cmd /c mklink /J "$HOME\.claude\skills\$($_.Name)" $_.FullName
 }
 ```
 
