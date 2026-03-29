@@ -53,7 +53,12 @@ Output results in Vietnamese using the format from [references/report-format.md]
 
 ### Step 4: Fix
 
-Fix all reported issues from Critical to Low. Run `php -l` on every modified file to verify syntax.
+Fix reported issues from Critical to Low, but **ask the user before fixing** patterns that may be intentional:
+- SSL verification disabled in cURL fallback (may be needed for hosting compatibility)
+- Sensitive data passed to frontend JS via `wp_localize_script()` (may be required by frontend logic)
+- Other patterns where fixing could break existing functionality
+
+Only auto-fix issues that are clearly unintentional (missing `esc_html()`, missing `wp_check_filetype()`, raw `unserialize()`, etc.). Run `php -l` on every modified file to verify syntax.
 
 ## Audit categories
 
