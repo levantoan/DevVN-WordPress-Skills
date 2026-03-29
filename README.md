@@ -94,7 +94,7 @@ MIT
 
 # DevVN WordPress Skills (Tiếng Việt)
 
-Bộ sưu tập [Agent Skills](https://agentskills.io) dành cho phát triển plugin và theme WordPress. Được xây dựng bởi [DevVN](https://levantoan.com) — đã kiểm chứng qua 20+ plugin WordPress thương mại.
+Bộ sưu tập [Agent Skills](https://agentskills.io) dành cho phát triển plugin và theme WordPress. Được xây dựng bởi [Lê Văn Toản](https://levantoan.com) — đã kiểm chứng qua 20+ plugin WordPress thương mại.
 
 ## Danh sách Skills
 
