@@ -73,6 +73,10 @@ function {prefix}_strip_assets_on_landing() : void {
 
     // 5. Remove oEmbed JS (keep discovery link for SEO).
     remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+
+    // 6. Remove Flatsome theme inline CSS (custom-css).
+    remove_action( 'wp_head', 'flatsome_custom_css', 100 );
+    remove_action('wp_footer', 'flatsome_mobile_menu', 7);
 }
 ```
 
