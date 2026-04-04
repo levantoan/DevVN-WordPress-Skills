@@ -7,6 +7,7 @@ A collection of [Agent Skills](https://agentskills.io) for WordPress plugin and 
 | Skill | Description |
 |-------|-------------|
 | [`devvn-wp-security-audit`](skills/devvn-wp-security-audit/) | Comprehensive WPCS security audit — SQL Injection, XSS, CSRF, Access Control, File Upload. Scans all PHP files with file:line reporting and fix suggestions. |
+| [`devvn-html-to-wp-acf`](skills/devvn-html-to-wp-acf/) | Convert static HTML landing pages into WordPress page templates with ACF/SCF integration — field registration, template conversion, CSS minification, and asset stripping. |
 
 ## Installation
 
@@ -58,6 +59,7 @@ Skills activate automatically when Claude detects a matching task, or invoke dir
 
 ```
 /devvn-wp-security-audit        # Run full security audit on current project
+/devvn-html-to-wp-acf           # Convert HTML landing page to WP + ACF template
 ```
 
 ## Compatibility
@@ -72,11 +74,18 @@ Works with any tool that supports the [Agent Skills](https://agentskills.io) ope
 DevVN-WordPress-Skills/
 ├── README.md
 └── skills/
-    └── devvn-wp-security-audit/
+    ├── devvn-wp-security-audit/
+    │   ├── SKILL.md
+    │   └── references/
+    │       ├── audit-rules.md
+    │       └── report-format.md
+    └── devvn-html-to-wp-acf/
         ├── SKILL.md
         └── references/
-            ├── audit-rules.md
-            └── report-format.md
+            ├── acf-registration.md
+            ├── asset-stripping.md
+            ├── field-mapping.md
+            └── template-patterns.md
 ```
 
 ## Contributing
@@ -101,6 +110,7 @@ Bộ sưu tập [Agent Skills](https://agentskills.io) dành cho phát triển p
 | Skill | Mô tả |
 |-------|-------|
 | [`devvn-wp-security-audit`](skills/devvn-wp-security-audit/) | Audit bảo mật toàn diện theo chuẩn WPCS — SQL Injection, XSS, CSRF, Access Control, File Upload. Quét tất cả file PHP, báo cáo chi tiết file:line kèm gợi ý sửa lỗi. |
+| [`devvn-html-to-wp-acf`](skills/devvn-html-to-wp-acf/) | Chuyển đổi trang HTML tĩnh (landing page) sang WordPress page template với ACF/SCF — đăng ký field bằng PHP, chuyển template, nén CSS, và loại bỏ asset thừa. |
 
 ## Cài đặt
 
@@ -152,6 +162,7 @@ Skills tự động kích hoạt khi Claude phát hiện task phù hợp, hoặc
 
 ```
 /devvn-wp-security-audit        # Chạy audit bảo mật toàn bộ project
+/devvn-html-to-wp-acf           # Chuyển HTML landing page sang WP + ACF template
 ```
 
 ## Tương thích
